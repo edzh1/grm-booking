@@ -33,5 +33,5 @@ jobs:
             CR_REPO: grm-booking
             IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t cr.yandex/$CR_REGISTRY/$CR_REPO:$IMAGE_TAG .
+          docker build -t cr.yandex/$CR_REGISTRY/$CR_REPO:$IMAGE_TAG BUILD_REF=$IMAGE_TAG .
           docker push cr.yandex/$CR_REGISTRY/$CR_REPO:$IMAGE_TAG
